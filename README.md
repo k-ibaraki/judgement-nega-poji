@@ -1,3 +1,7 @@
+# これなに？
+Azure Static Web App で遊んでます。
+作りかけです。
+
 # Static Web App
 
 This project was created to help represent a fundamental app written with Svelte. The shopping theme is used throughout the app.
