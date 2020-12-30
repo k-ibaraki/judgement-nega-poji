@@ -3,8 +3,11 @@
     let output = 'output';
 
     async function negaposi() {
+        // 関数名
+        const func_name='call_text_analytics'
 
-        const host = 'https://localhost/'
+        // 関数のPath
+        const host = '/api/' + func_name
 
         // body
         const body = {
