@@ -10,20 +10,21 @@
         const host = '/api/' + func_name
 
         // body
-        const body = {
-            "documents": [
-                {
-                    "language": "ja",
-                    "id": "1",
-                    "text": input
-                }
-            ]
-        };
+        // const body = {
+        //     "documents": [
+        //         {
+        //             "language": "ja",
+        //             "id": "1",
+        //             "text": input
+        //         }
+        //     ]
+        // };
+        const body = { "test" : "hoge" }
 
         // APIを実行
         const responseJson = await fetch(host,{
             method: 'POST',
-            mode: 'cors',
+            //mode: 'cors',
             cache: 'no-cache',
             headers: {
               'Content-Type': 'application/json'

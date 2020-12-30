@@ -24,7 +24,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         pass
 
     # Text Analyticsのエンドポイント
-    host = os.environ["TEXT_ANALYTICS_ENDPOINT"] + 'text/analytics/v3.1-preview.1/sentiment'
+    host = os.environ["TEXT_ANALYTICS_ENDPOINT"] + 'text/analytics/v3.1-preview.3/sentiment'
     # キー
     key = os.environ["TEXT_ANALYTICS_KEY"]
 
