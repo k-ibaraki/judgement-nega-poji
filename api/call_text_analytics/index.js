@@ -1,3 +1,5 @@
+global.fetch = require('node-fetch');
+
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
 
@@ -11,7 +13,7 @@ module.exports = async function (context, req) {
             {
                 "language": "ja",
                 "id": "1",
-                "text": req.body
+                "text": req.body.text
             }
         ]
     };

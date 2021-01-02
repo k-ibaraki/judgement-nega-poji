@@ -21,7 +21,13 @@
         "allowedRoles": [
           "anonymous"
         ]
-    },    
+    },
+    {
+      "route": "/api/*",
+      "allowedRoles": [
+        "anonymous"
+      ]
+    },
     {
       "route": "/*",
       "serve": "/index.html",
