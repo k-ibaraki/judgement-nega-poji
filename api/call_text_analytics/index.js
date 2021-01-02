@@ -2,6 +2,7 @@ global.fetch = require('node-fetch');
 
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
+    context.log(req.body.user)
 
     // 環境変数からText Analyticsの情報とってくる
     const host = process.env.TEXT_ANALYTICS_ENDPOINT + "/text/analytics/v3.1-preview.3/sentiment";

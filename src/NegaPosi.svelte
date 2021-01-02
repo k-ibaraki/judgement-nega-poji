@@ -2,29 +2,32 @@
     let input = 'ありがとうございます。あなたは素晴らしい人です。死ね。';
     let output = 'output';
 
+    // ユーザー情報を取得
+    async function getUserInfo() {
+        const response = await fetch("/.auth/me");
+        const payload = await response.json();
+        const { clientPrincipal } = payload;
+        return clientPrincipal;
+    }
+
     async function negaposi() {
-        // 関数名
+        // user情報
+        user = getUserInfo()
+
+
+        // API名
         const func_name='call_text_analytics'
-
-        // 関数のPath
+        // APIのPath
         const host = '/api/' + func_name
-
-        // body
-        // const body = {
-        //     "documents": [
-        //         {
-        //             "language": "ja",
-        //             "id": "1",
-        //             "text": input
-        //         }
-        //     ]
-        // };
-        const body = { "text" : input }
+        // APIのBody
+        const body = {
+            "text" : input,
+            "user" : user
+        }
 
         // APIを実行
         const responseJson = await fetch(host,{
             method: 'POST',
-            //mode: 'cors',
             cache: 'no-cache',
             headers: {
               'Content-Type': 'application/json'
