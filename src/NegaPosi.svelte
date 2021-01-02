@@ -12,18 +12,17 @@
 
     async function negaposi() {
         // user情報
-        user = getUserInfo()
-
+        const user = getUserInfo();
 
         // API名
-        const func_name='call_text_analytics'
+        const func_name='call_text_analytics';
         // APIのPath
-        const host = '/api/' + func_name
+        const host = '/api/' + func_name;
         // APIのBody
         const body = {
             "text" : input,
             "user" : user
-        }
+        };
 
         // APIを実行
         const responseJson = await fetch(host,{
@@ -38,10 +37,10 @@
             output = 'えらーです'
             console.error(err)
             throw err
-        })
+        });
 
         // 結果を保存
-        output = JSON.stringify(responseJson, null, "\t")
+        output = JSON.stringify(responseJson, null, "\t");
     }
 
 </script>
