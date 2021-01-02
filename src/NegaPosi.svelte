@@ -19,7 +19,7 @@
         //         }
         //     ]
         // };
-        const body = { "test" : "hoge" }
+        const body = { "text" : input }
 
         // APIを実行
         const responseJson = await fetch(host,{
