@@ -3,28 +3,22 @@
     let output = 'output';
 
     async function negaposi() {
-        // 関数名
-        const func_name='call_text_analytics'
+        // user情報取得
+        const user = await fetch("/.auth/me").then((response) => response.json());
 
-        // 関数のPath
-        const host = '/api/' + func_name
-
-        // body
-        // const body = {
-        //     "documents": [
-        //         {
-        //             "language": "ja",
-        //             "id": "1",
-        //             "text": input
-        //         }
-        //     ]
-        // };
-        const body = { "text" : input }
+        // API名
+        const func_name='call_text_analytics';
+        // APIのPath
+        const host = '/api/' + func_name;
+        // APIのBody
+        const body = {
+            "text" : input,
+            "user" : user
+        };
 
         // APIを実行
         const responseJson = await fetch(host,{
             method: 'POST',
-            //mode: 'cors',
             cache: 'no-cache',
             headers: {
               'Content-Type': 'application/json'
@@ -35,10 +29,10 @@
             output = 'えらーです'
             console.error(err)
             throw err
-        })
+        });
 
         // 結果を保存
-        output = JSON.stringify(responseJson, null, "\t")
+        output = JSON.stringify(responseJson, null, "\t");
     }
 
 </script>
