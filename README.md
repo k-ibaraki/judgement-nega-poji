@@ -1,6 +1,8 @@
 # これなに？
-Azure Static Web App で遊んでます。
-作りかけです。
+Azure Static Web App + Text Analytics で遊んでます。
+
+こちらにデプロイしています。
+https://calm-bay-09fad7000-7.eastasia.azurestaticapps.net/
 
 # Static Web App
 
