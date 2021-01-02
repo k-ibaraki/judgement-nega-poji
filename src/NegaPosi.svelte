@@ -2,17 +2,9 @@
     let input = 'ありがとうございます。あなたは素晴らしい人です。死ね。';
     let output = 'output';
 
-    // ユーザー情報を取得
-    async function getUserInfo() {
-        const response = await fetch("/.auth/me");
-        const payload = await response.json();
-        const { clientPrincipal } = payload;
-        return clientPrincipal;
-    }
-
     async function negaposi() {
-        // user情報
-        const user = getUserInfo();
+        // user情報取得
+        const user = await fetch("/.auth/me").then((response) => response.json());
 
         // API名
         const func_name='call_text_analytics';

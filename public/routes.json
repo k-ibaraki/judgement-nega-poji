@@ -27,7 +27,7 @@
       "serve": "/index.html",
       "statusCode": 200,
       "allowedRoles": [
-        "Authenticated"
+        "authenticated"
       ]
     }
   ],
